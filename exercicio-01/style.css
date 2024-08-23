@@ -95,8 +95,26 @@ legend{color:#000}#yui3-css-stamp.cssreset{display:none}
     width: 100%;
     display: block;
     float: left;
+    padding: 15px;
 }
 #menu{
     display: inline-block;
+    width: 70%;
     float: right;
+}
+.menu-item{
+    display: inline-block;
+    float: right;
+    width: 100px;
+    margin: auto;
+}
+.menu-link{
+    display: inline-block;
+}
+.jumbotron{
+    display: block;
+    padding: 45px;
+}
+main {
+    
 }
