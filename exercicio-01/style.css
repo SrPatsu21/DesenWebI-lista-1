@@ -1,7 +1,5 @@
-/* minimalise css */
-
 html{color:#000;background:#FFF}
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;font-family: Arial;line-height: 1.5em;}
 table{border-collapse:collapse;border-spacing:0}
 fieldset,img{border:0}
 address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
@@ -13,47 +11,87 @@ abbr,acronym{border:0;font-variant:normal}
 sup{vertical-align:text-top}
 sub{vertical-align:text-bottom}
 input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit; font-size:100%}
+h1, h2 {
+    line-height: 2.5em;
+}
 
-.navbar{
-    background-color: aqua;
-    width: 100%;
+* {
+box-sizing: border-box;
+}
 
-    display: inline;
-    float: left;
-    padding: 15px;
+nav {
+overflow: hidden;
+background-color: #ccc;
+padding: 10px;
 }
-#menu{
-    display: block;
-    width: 60%;
-    float: right;
-}
-.menu-item{
-    display: block;
-    float: right;
-    width: 100px;
-    margin: auto;
-}
-.menu-link{
-    display: block;
-}
-.jumbotron{
-    display: block;
-    padding: 45px;
-}
-.container
-{
-    display: inline;
-    margin-top: 20px;
-}
-.clearfix
-{
 
+#menu {
+float: right;
 }
-.linha
-{
 
+.menu-link {
+text-decoration: none;
+color: #666;
+line-height: 2;
+display: inline-block;
+margin-right: 10px;
+padding: 10px 15px;
+background-color: #f8f8f8;
 }
-.coluna
-{
 
+.container {
+width: 1140px;
+margin: 0 auto;
+max-width: 100%;
+margin-top: 20px;
+}
+
+.container p {
+margin-top: 15px;
+}
+
+.jumbotron {
+padding: 60px;
+background-color: lime;
+}
+
+.coluna {
+width: 30%;
+float: left;
+padding: 15px;
+margin-right: 15px;
+}
+
+.coluna:nth-last-child(1) {
+width: 30%;
+}
+
+footer {
+padding-top: 15px;
+padding-bottom: 15px;
+margin-top: 40px;
+text-align: center;
+background-color: green;
+color: white;
+}
+
+.btn {
+border-radius: 8px;
+display: inline-block;
+padding: 10px 20px;
+}
+
+.btn-small {
+padding: 3px 10px;
+}
+
+.btn-primary {
+background-color: cornflowerblue;
+color: #f8f8f8;
+font-weight: bold;
+}
+
+.btn-secondary {
+background-color: lightgray;
+color: #222;
 }
