@@ -15,10 +15,22 @@ document.addEventListener('DOMContentLoaded', () => {
         taskList.innerHTML = '';
         tasks.forEach((task, index) => {
             const li = document.createElement('li');
-            li.textContent = task.text;
+
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.checked = task.completed;
+            checkbox.addEventListener('change', () => {
+                task.completed = checkbox.checked;
+                saveTasks();
+                renderTasks();
+            });
+
+            const span = document.createElement('span');
+            span.textContent = task.text;
             if (task.completed) {
-                li.classList.add('completed');
+                span.classList.add('completed');
             }
+
             const deleteButton = document.createElement('button');
             deleteButton.textContent = 'Remover';
             deleteButton.addEventListener('click', () => {
@@ -26,12 +38,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 saveTasks();
                 renderTasks();
             });
+
+            li.appendChild(checkbox);
+            li.appendChild(span);
             li.appendChild(deleteButton);
-            li.addEventListener('click', () => {
-                task.completed = !task.completed;
-                saveTasks();
-                renderTasks();
-            });
             taskList.appendChild(li);
         });
     }
@@ -39,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function filterTasks() {
         const query = taskFilter.value.toLowerCase();
         document.querySelectorAll('#task-list li').forEach(li => {
-            const text = li.textContent.toLowerCase();
+            const text = li.querySelector('span').textContent.toLowerCase();
             li.style.display = text.includes(query) ? '' : 'none';
         });
     }
