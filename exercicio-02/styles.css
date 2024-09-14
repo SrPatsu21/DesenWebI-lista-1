@@ -1,14 +1,13 @@
 /* Definindo estilos para os temas claro e escuro */
-:root
-{
+:root {
     --background-light: #ffffff;
     --background-dark: #121212;
     --text-light: #000000;
     --text-dark: #ffffff;
     --completed: #d3d3d3;
 }
-body
-{
+
+body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
@@ -16,76 +15,94 @@ body
     color: var(--text-light);
     transition: background-color 0.3s, color 0.3s;
 }
-[data-theme='dark']
-{
+
+[data-theme='dark'] {
     background-color: var(--background-dark);
     color: var(--text-dark);
 }
-header
-{
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
     padding-bottom: 20px;
     border-bottom: 1px solid #ccc;
 }
-button
-{
+
+button {
     background-color: #007bff;
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
-main
-{
-    margin-top: 30px;
-    padding: 0px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-}
-main form, div
-{
-    display: flex;
-    justify-items: center;
-    align-items: stretch;
-}
-button:hover
-{
+
+button:hover {
     background-color: #0056b3;
 }
-#task-list
-{
+
+#task-filter {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: calc(100% - 22px);
+}
+
+#task-form {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#task-form input {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+#task-form button {
+    padding: 10px 20px;
+}
+
+#task-list {
     list-style: none;
-    width: 50%;
     padding: 0;
 }
-#task-list li
-{
+
+#task-list li {
+    display: flex;
+    align-items: center;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
     transition: background-color 0.3s;
 }
-#task-list li.completed
-{
+
+#task-list li.completed {
     background-color: var(--completed);
     text-decoration: line-through;
 }
-#task-list li button
-{
+
+#task-list li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#task-list li button {
     background-color: #dc3545;
     border: none;
     color: white;
     padding: 5px;
     cursor: pointer;
-    float: right;
+    margin-left: auto;
+    transition: background-color 0.3s;
 }
-#task-list li button:hover
-{
+
+#task-list li button:hover {
     background-color: #c82333;
 }
