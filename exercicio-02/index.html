@@ -8,21 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Lista de Tarefas</h1>
-        <button id="theme-toggle">Trocar Tema</button>
-    </header>
-    <main>
-        <div>
-            <input type="text" id="task-filter" placeholder="Filtrar tarefas">
+    <div class="container">
+        <header>
+            <h1>Lista de Tarefas</h1>
+            <button id="theme-toggle" aria-label="Alternar tema">🌙</button>
+        </header>
+        <div class="task-input">
+            <input type="text" id="task-filter" placeholder="Filtrar tarefas" aria-label="Filtrar tarefas">
+            <input type="text" id="task-name" placeholder="Nova tarefa" aria-label="Nova tarefa">
+            <button id="add-task" aria-label="Adicionar tarefa">Adicionar Tarefa</button>
         </div>
-        <ul id="task-list">
-        </ul>
-        <form id="task-form">
-            <input type="text" id="task-input" placeholder="Adicionar nova tarefa" required>
-            <button type="submit">Adicionar</button>
-        </form>
-    </main>
-    <script src="script.js"></script>
+        <ul id="task-list" aria-live="polite" aria-label="Lista de tarefas"></ul>
+    </div>
+    <script src="./script.js"></script>
 </body>
 </html>
