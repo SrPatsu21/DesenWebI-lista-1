@@ -7,7 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Carrega tarefas do localStorage
     function loadTasks() {
-        const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        var tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+        if (!Object.keys(tasks).length) {
+            tasks = gerarTarefasAleatorias(3)
+        }
         taskList.innerHTML = '';
         tasks.forEach(task => {
             const li = document.createElement('li');
@@ -25,6 +28,31 @@ document.addEventListener('DOMContentLoaded', () => {
             taskList.appendChild(li);
         });
     }
+
+function gerarTarefasAleatorias(numTarefas) {
+    const nomes = [
+        "Estudar JavaScript",
+        "Fazer compras",
+        "Limpar a casa",
+        "Ler um livro",
+        "Exercitar-se",
+        "Cozinhar",
+        "Organizar documentos",
+        "Assistir a um filme"
+    ];
+
+    const tarefas = [];
+    for (let i = 0; i < numTarefas; i++) {
+        const nomeAleatorio = nomes[Math.floor(Math.random() * nomes.length)];
+        const completadoAleatorio = Math.random() < 0; // coloque 0.5 para ter 50% de chance
+
+        tarefas.push({
+            name: nomeAleatorio,
+            completed: completadoAleatorio
+        });
+    }
+    return tarefas;
+}
 
 // Salvar tarefas no localStorage
 function saveTasks() {

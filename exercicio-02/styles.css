@@ -1,6 +1,8 @@
 /* Definições gerais */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Sofadi One", system-ui;
+    font-optical-sizing: auto;
+    font-style: normal;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -59,7 +61,7 @@ header h1 {
 
 .task-item.completed {
     text-decoration: line-through;
-    background-color: #226122;
+    background-color: #349c34;
 }
 
 .task-item button {
