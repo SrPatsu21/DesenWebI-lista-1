@@ -17,6 +17,8 @@ form
 label
 {
     display: block;
+    width: 100%;
+    max-width: 20%;
     margin: 10px 0 5px;
 }
 input, select, button
@@ -69,4 +71,22 @@ button:hover, a:hover
     button, a {
         background-color: #0056b3;
     }
+}
+
+#imageForm
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+#imageForm > div
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
 }

@@ -50,15 +50,21 @@ document.getElementById('imageForm').addEventListener('submit', async function(e
             navigator.clipboard.writeText(imageUrl)
         };
 
-        const shareLink = document.createElement('a');
-        shareLink.href = `https://wa.me/?text=${encodeURIComponent(imageUrl)}`;
-        shareLink.target = '_blank';
-        shareLink.textContent = 'Compartilhar no WhatsApp';
+        const shareWhatsAppLink = document.createElement('a');
+        shareWhatsAppLink.href = `https://wa.me/?text=${encodeURIComponent(imageUrl)}`;
+        shareWhatsAppLink.target = '_blank';
+        shareWhatsAppLink.textContent = 'Compartilhar no WhatsApp';
+
+        const shareEmail = document.createElement('a');
+        shareEmail.href = `mailto:?subject=Confira%20esta%20imagem&body=Veja%20esta%20imagem:${encodeURIComponent(imageUrl)}`
+        shareEmail.target = '_blank'
+        shareEmail.textContent = 'Compartilhar com e-mail';
 
         imgContainer.appendChild(img);
         imgContainer.appendChild(downloadButton);
         imgContainer.appendChild(copyLinkButton);
-        imgContainer.appendChild(shareLink);
+        imgContainer.appendChild(shareWhatsAppLink);
+        imgContainer.appendChild(shareEmail)
         imageGrid.appendChild(imgContainer);
     }
 });
