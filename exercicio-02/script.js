@@ -19,9 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <input type="checkbox" ${task.completed ? 'checked' : ''} class="task-checkbox" aria-label="Marcar como concluída">
                 <div class="help">${task.name}</div>
                 <button class="remove-task" aria-label="Remover tarefa">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-                    </svg>
+                    X
                 </button>
             `;
             li.classList.add('fade-in');
@@ -60,7 +58,7 @@ function saveTasks() {
     const tasks = Array.from(document.querySelectorAll('.task-item')).map(item => {
         // Encontre o parágrafo dentro do item
         return {
-            name: item.textContent.trim(),
+            name: item.textContent.trim().slice(0, -1),
             completed: item.classList.contains('completed')
         };
     });
@@ -76,9 +74,7 @@ function saveTasks() {
                 <input type="checkbox" class="task-checkbox" aria-label="Marcar como concluída">
                 ${name}
                 <button class="remove-task" aria-label="Remover tarefa">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
-                    </svg>
+                    X
                 </button>
             `;
             taskList.appendChild(li);
