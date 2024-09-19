@@ -18,6 +18,7 @@ document.getElementById('imageForm').addEventListener('submit', async function(e
     imageGrid.innerHTML = ''; // Limpa o grid antes de adicionar novas imagens
 
     for (let i = 0; i < quantity; i++) {
+
         const imageUrl = `https://picsum.photos/${width}/${height}?random=${Math.random()}`;
 
         const imgContainer = document.createElement('div');
@@ -61,8 +62,8 @@ document.getElementById('imageForm').addEventListener('submit', async function(e
         shareEmail.textContent = 'Compartilhar com e-mail';
 
         imgContainer.appendChild(img);
-        imgContainer.appendChild(downloadButton);
         imgContainer.appendChild(copyLinkButton);
+        imgContainer.appendChild(downloadButton);
         imgContainer.appendChild(shareWhatsAppLink);
         imgContainer.appendChild(shareEmail)
         imageGrid.appendChild(imgContainer);

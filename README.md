@@ -35,7 +35,8 @@ Além disso, siga essas boas práticas em todos os exercícios:
 
 ## Lista de Exercícios 1
 
-1. Use o conteúdo HTML abaixo contém a estrutura base para uma página com barra de navegação (logotipo a esquerda e menu a direita), cabeçalho, conteúdo principal dividido em três colunas e rodapé. Adicione o estilo CSS para organizar os elementos. Use 3 estilos diferentes para organizar o conteúdo:
+1. 
+<!-- Use o conteúdo HTML abaixo contém a estrutura base para uma página com barra de navegação (logotipo a esquerda e menu a direita), cabeçalho, conteúdo principal dividido em três colunas e rodapé. Adicione o estilo CSS para organizar os elementos. Use 3 estilos diferentes para organizar o conteúdo: -->
    <!-- - [x] Estilo 1: use `display: block` com `float`.
    - [x] Estilo 2: use `display: flex` com `flex-direction`, `justify-content`, `align-items`, etc
    - [x] Estilo 3: use `display: grid` com `grid-template-columns`, `grid-template-areas`, etc
@@ -137,7 +138,8 @@ Além disso, siga essas boas práticas em todos os exercícios:
 </html>
 ``` -->
 
-2. Criar um sistema web para uma lista de tarefas. O sistema deve permitir adicionar, remover e marcar como concluída uma tarefa. Além disso, faça:
+2. 
+<!-- Criar um sistema web para uma lista de tarefas. O sistema deve permitir adicionar, remover e marcar como concluída uma tarefa. Além disso, faça: -->
    <!-- - [x] Adicionar um campo de texto para filtrar as tarefas por nome. -->
    <!-- - [x] Armazenar as tarefas no `localStorage` para que elas não sejam perdidas ao recarregar a página. -->
    <!-- - [x] Popular a lista de tarefas com alguns dados fictícios, caso o `localStorage` esteja vazio. -->
@@ -148,13 +150,15 @@ Além disso, siga essas boas práticas em todos os exercícios:
    - [x] **Acessibilidade**: respeitar o critério 2.1.1 sobre teclado da WCAG disponível em: [https://www.guia-wcag.com/](https://www.guia-wcag.com/). -->
    <!-- - [ ] (opcional): Adicionar animações de transição ao adicionar, remover e marcar como concluída uma tarefa. -->
 
-3. A página picsum.photos contém uma API que retorna imagens aleatórias. Crie um sistema web que tenha um formulário para o usuário informar a largura e a altura da imagem que deseja e a quantidade de imagens (escolher entre 3, 5, 10 ou 20). Ao clicar em um botão, o sistema deve exibir as imagens retornadas pela API. O resultado deve ser organizado como um grid de imagens. Permita que o usuário possa baixar a imagem que desejar em tamanho Full HD. As imagens precisam estar no formato `webp`. Leia a documentação da API para saber como fazer a requisição: [https://picsum.photos/](https://picsum.photos/). Além disso, faça:
+3. 
+<!-- A página picsum.photos contém uma API que retorna imagens aleatórias. Crie um sistema web que tenha um formulário para o usuário informar a largura e a altura da imagem que deseja e a quantidade de imagens (escolher entre 3, 5, 10 ou 20). Ao clicar em um botão, o sistema deve exibir as imagens retornadas pela API. O resultado deve ser organizado como um grid de imagens. Permita que o usuário possa baixar a imagem que desejar em tamanho Full HD. As imagens precisam estar no formato `webp`. Leia a documentação da API para saber como fazer a requisição: [https://picsum.photos/](https://picsum.photos/). Além disso, faça: -->
    <!-- - [x] Adicionar validação de formulário para os campos de largura, altura e quantidade de imagens. Caso o usuário informe um valor inválido, exibir uma mensagem de erro. Use html5 e/ou JavaScript para fazer a validação. Traga valores padrões para os campos. -->
    <!-- - [x] Adicionar um botão/link para copiar o link da imagem. Use a API `navigator.clipboard` para fazer isso. -->
    <!-- - [x] Adicionar um botão/link para compartilhar a imagem no WhatsApp, por e-mail ou outra rede social. -->
    - [x] **Acessibilidade**: respeitar o critério 1.1.1 sobre conteúdo não textual da WCAG disponível em: [https://www.guia-wcag.com/](https://www.guia-wcag.com/).
-   - [x] **Acessibilidade**: respeitar o critério 1.4.3 sobre contraste mínimo da WCAG disponível em: [https://www.guia-wcag.com/](https://www.guia-wcag.com/).
-   - [x] **Acessibilidade**: respeitar o critério 2.4.4 sobre foco visível da WCAG disponível em: [https://www.guia-wcag.com/](https://www.guia-wcag.com/).
+   <!-- ! A API torna impossivel, ela n retorna o nome da imagem, ela 'e apenas capaz de retornar o autor porem n 'e em modo aleatorio -->
+   <!-- - [x] **Acessibilidade**: respeitar o critério 1.4.3 sobre contraste mínimo da WCAG disponível em: [https://www.guia-wcag.com/](https://www.guia-wcag.com/). -->
+   <!-- - [x] **Acessibilidade**: respeitar o critério 2.4.4 sobre foco visível da WCAG disponível em: [https://www.guia-wcag.com/](https://www.guia-wcag.com/). -->
 
 4. Criar um sistema web que permita ao usuário tirar uma foto com a câmera do dispositivo e marcar a localização da foto em um mapa. O sistema deve exibir a foto tirada e a localização no mapa. Além disso, faça:
    - [x] Adicionar um botão para tirar a foto. Use a API `navigator.mediaDevices.getUserMedia` para acessar a câmera do dispositivo. Caso o dispositivo não tenha câmera, permitir que o usuário faça o upload de uma foto.

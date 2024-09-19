@@ -40,7 +40,13 @@ input, select, button
 }
 .image-container
 {
-    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.image-container > a
+{
+    width: 90%;
 }
 img
 {
@@ -87,6 +93,11 @@ button:hover, a:hover
 {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: start;
     margin-bottom: 20px;
+}
+
+#imageForm > div > *
+{
+    padding: 10px;
 }

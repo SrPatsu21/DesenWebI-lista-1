@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#camera-container {
+    margin-bottom: 20px;
+}
+
+video {
+    width: 300px;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+#photo-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#photo-table th, #photo-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+button {
+    margin-top: 10px;
+}
