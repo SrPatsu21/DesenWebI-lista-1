@@ -10,38 +10,49 @@
     <h1>Captura de Foto e Localização</h1>
 
     <div id="camera-container">
-        <video id="video" autoplay></video>
-        <button id="capture">Tirar Foto</button>
-        <input type="file" id="file-input" accept="image/*" />
+        <video id="video" alt="Camera do Dispositivo" autoplay></video>
+        <canvas id="canvas" style="display:none;"></canvas>
+        <img id="photo" alt="Foto Capturada">
+        <div>
+            <button id="capture">Tirar Foto</button>
+            <input type="file" id="file-input" accept="image/*" />
+        </div>
     </div>
 
-    <canvas id="canvas" style="display: none;"></canvas>
+    <div>
+        <h2>Localização</h2>
+        <button id="get-location">Marcar Localização</button>
+        <input type="text" id="latitude" placeholder="Latitude" />
+        <input type="text" id="longitude" placeholder="Longitude" />
+    </div>
 
-    <h2>Localização</h2>
-    <button id="get-location">Marcar Localização</button>
-    <input type="text" id="latitude" placeholder="Latitude" />
-    <input type="text" id="longitude" placeholder="Longitude" />
-
-    <h2>Informações da Foto</h2>
-    <input type="text" id="title" placeholder="Título" required />
-    <textarea id="description" placeholder="Descrição"></textarea>
-
+    <div>
+        <h2>Informações da Foto</h2>
+        <input type="text" id="title" placeholder="Título" required />
+        <textarea id="description" placeholder="Descrição"></textarea>
+    </div>
     <button id="save">Salvar</button>
 
-    <h2>Registro de Fotos</h2>
-    <table id="photo-table">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Título</th>
-                <th>Descrição</th>
-                <th>Localização</th>
-                <th>Data</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody id="table-body"></tbody>
-    </table>
+    <div>
+        <h2>Registro de Fotos</h2>
+        <table id="photo-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Descrição</th>
+                    <th>Localização</th>
+                    <th>Data</th>
+                    <th>Ações</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
+    <div id="map"></div>
+
+
 
     <script src="script.js"></script>
 </body>

@@ -1,18 +1,35 @@
-body {
+body
+{
     font-family: Arial, sans-serif;
     margin: 20px;
-}
 
-#camera-container {
-    margin-bottom: 20px;
 }
-
-video {
+body > div
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
+    align-items: baseline;
+}
+body > div > h2
+{
+    display: block;
+    width: 100%;
+}
+img
+{
     width: 300px;
     height: auto;
     border: 1px solid #ccc;
 }
-
+video
+{
+    border-style: dotted;
+    border-color: black;
+    margin-bottom: 10px;
+}
 #photo-table {
     width: 100%;
     border-collapse: collapse;
@@ -22,8 +39,29 @@ video {
     border: 1px solid #ccc;
     padding: 8px;
     text-align: left;
+    vertical-align: top;
 }
 
 button {
-    margin-top: 10px;
+    margin: 10px;
+}
+#description
+{
+    min-width: 300px;
+    min-height: 100px;
+}
+#save
+{
+    background-color: #007bff; /* Cor azul */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    padding: 10px 20px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor em forma de mão ao passar o mouse */
+    transition: background-color 0.3s; /* Efeito de transição */
+}
+#title
+{
+    align-self: self-start;
 }

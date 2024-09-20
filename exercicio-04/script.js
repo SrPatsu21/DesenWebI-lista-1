@@ -38,11 +38,13 @@ document.getElementById('get-location').addEventListener('click', () => {
     }
 });
 
+
 document.getElementById('save').addEventListener('click', () => {
     const title = document.getElementById('title').value;
     const description = document.getElementById('description').value;
     const latitude = latitudeInput.value;
     const longitude = longitudeInput.value;
+    const image = document.getElementById('photo').src
 
     if (title) {
         const newRecord = {
@@ -52,7 +54,7 @@ document.getElementById('save').addEventListener('click', () => {
             latitude,
             longitude,
             date: new Date().toLocaleString(),
-            image: canvas.toDataURL('image/png'),
+            image: image,
         };
         photoRecords.push(newRecord);
         localStorage.setItem('photos', JSON.stringify(photoRecords));
@@ -63,15 +65,24 @@ document.getElementById('save').addEventListener('click', () => {
     }
 });
 
+function savePhoto(data) {
+    const imgElement = document.getElementById('photo');
+    imgElement.src = data;
+}
+
 function displayPhotos() {
     tableBody.innerHTML = '';
     photoRecords.forEach(record => {
         const row = document.createElement('tr');
+        row.setAttribute('id', `imgid${record.id}`)
         row.innerHTML = `
             <td>${record.id}</td>
             <td>${record.title}</td>
             <td>${record.description}</td>
-            <td>${record.latitude}, ${record.longitude}</td>
+            <td>
+                ${record.longitude}, ${record.latitude}
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14636.840390747642!2d${record.longitude}!3d${record.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1726798866295!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </td>
             <td>${record.date}</td>
             <td>
                 <button onclick="viewDetails(${record.id})">Ver</button>
@@ -83,9 +94,21 @@ function displayPhotos() {
     });
 }
 
-function viewDetails(id) {
-    const record = photoRecords.find(photo => photo.id === id);
-    alert(`Título: ${record.title}\nDescrição: ${record.description}\nLocalização: ${record.latitude}, ${record.longitude}\nData: ${record.date}`);
+async function viewDetails(id)
+{
+    if(!document.getElementById(`imgid${id}`).querySelector('img'))
+    {
+        const record = photoRecords.find(photo => photo.id === id);
+        const img = document.createElement('img');
+        img.src= record.image;
+        img.alt= record.title;
+        img.style.width = '100%';
+
+        document.getElementById(`imgid${record.id}`).appendChild(img)
+    }else
+    {
+        document.getElementById(`imgid${id}`).querySelector('img').remove()
+    }
 }
 
 function deletePhoto(id) {
@@ -103,6 +126,7 @@ function editPhoto(id) {
     document.getElementById('description').value = record.description;
     latitudeInput.value = record.latitude;
     longitudeInput.value = record.longitude;
+    document.getElementById('photo').src = record.image;
 
     deletePhoto(id); // Excluir após carregar os dados para editar
 }
@@ -112,6 +136,7 @@ function clearInputs() {
     document.getElementById('description').value = '';
     latitudeInput.value = '';
     longitudeInput.value = '';
+    document.getElementById('photo').src = ''
 }
 
 setupCamera();

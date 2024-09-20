@@ -160,15 +160,15 @@ Além disso, siga essas boas práticas em todos os exercícios:
    <!-- - [x] **Acessibilidade**: respeitar o critério 1.4.3 sobre contraste mínimo da WCAG disponível em: [https://www.guia-wcag.com/](https://www.guia-wcag.com/). -->
    <!-- - [x] **Acessibilidade**: respeitar o critério 2.4.4 sobre foco visível da WCAG disponível em: [https://www.guia-wcag.com/](https://www.guia-wcag.com/). -->
 
-4. Criar um sistema web que permita ao usuário tirar uma foto com a câmera do dispositivo e marcar a localização da foto em um mapa. O sistema deve exibir a foto tirada e a localização no mapa. Além disso, faça:
-   - [x] Adicionar um botão para tirar a foto. Use a API `navigator.mediaDevices.getUserMedia` para acessar a câmera do dispositivo. Caso o dispositivo não tenha câmera, permitir que o usuário faça o upload de uma foto.
-   - [x] Adicionar um botão para marcar a localização da foto no mapa. Use a API `navigator.geolocation` para acessar a localização do dispositivo. Caso o dispositivo não tenha GPS, permitir que o usuário informe a localização manualmente.
-   - [x] Adicionar um campo de texto para o usuário informar título (obrigatório) e descrição (opcional) da foto.
-   - [x] Armazenar a foto e a localização no `localStorage` para que elas não sejam perdidas ao recarregar a página.
-   - [x] Criar uma tabela para exibir id, título, descrição, localização e data da foto. Adicionar um botão para visualizar detalhes da foto em uma modal ou em outra página. Para a localização, exibir um mapa com a localização marcada.
-   - [x] Adicionar um botão para excluir o registro. Exibir um modal de confirmação antes de excluir a foto.
-   - [x] Adicionar um botão para editar o registro. Exibir um formulário com os campos preenchidos para que o usuário possa editar o registro.
-   - [ ] (opcional) Adicionar um botão para compartilhar a foto e a localização em redes sociais.
+<!-- 4. Criar um sistema web que permita ao usuário tirar uma foto com a câmera do dispositivo e marcar a localização da foto em um mapa. O sistema deve exibir a foto tirada e a localização no mapa. Além disso, faça: -->
+   <!-- - [x] Adicionar um botão para tirar a foto. Use a API `navigator.mediaDevices.getUserMedia` para acessar a câmera do dispositivo. Caso o dispositivo não tenha câmera, permitir que o usuário faça o upload de uma foto. -->
+   <!-- - [x] Adicionar um botão para marcar a localização da foto no mapa. Use a API `navigator.geolocation` para acessar a localização do dispositivo. Caso o dispositivo não tenha GPS, permitir que o usuário informe a localização manualmente. -->
+   <!-- - [x] Adicionar um campo de texto para o usuário informar título (obrigatório) e descrição (opcional) da foto. -->
+   <!-- - [x] Armazenar a foto e a localização no `localStorage` para que elas não sejam perdidas ao recarregar a página. -->
+   <!-- - [x] Criar uma tabela para exibir id, título, descrição, localização e data da foto. Adicionar um botão para visualizar detalhes da foto em uma modal ou em outra página. Para a localização, exibir um mapa com a localização marcada. -->
+   <!-- - [x] Adicionar um botão para excluir o registro. Exibir um modal de confirmação antes de excluir a foto. -->
+   <!-- - [x] Adicionar um botão para editar o registro. Exibir um formulário com os campos preenchidos para que o usuário possa editar o registro. -->
+   <!-- - [ ] (opcional) Adicionar um botão para compartilhar a foto e a localização em redes sociais. -->
 
 5. Criar uma SinglePageApplication (SPA) para exibir informações básicas sobre você como estudante. A SPA deve conter as seguintes páginas:
    - [x] Home: exibir uma foto sua, seu nome, curso, semestre, e-mail e uma rede social para contato.
