@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrinho de Compras</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="checkout.html">Finalizar Compra</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Carrinho de Compras</h1>
+        <div id="cart"></div>
+        <button onclick="checkout()">Finalizar Compra</button>
+    </main>
+
+    <footer>
+        <p>Loja de Informática &copy; 2024</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const cartContainer = document.getElementById("cart");
+            cartContainer.innerHTML = cart.map(product => `
+                <div class="cart-item">
+                    <img src="${product.images[0]}" alt="${product.name}">
+                    <p>${product.name}</p>
+                    <p>Preço: R$ ${product.price.toFixed(2)}</p>
+                </div>
+            `).join("");
+        });
+
+        function checkout() {
+            if (confirm("Você deseja finalizar a compra?")) {
+                // Redirecionar para a página de checkout
+                window.location.href = "checkout.html";
+            }
+        }
+    </script>
+</body>
+</html>

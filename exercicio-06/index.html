@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de Informática</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cart.html">Carrinho</a></li>
+            </ul>
+            <input type="text" id="search" placeholder="Buscar por nome..." oninput="filterProducts()">
+        </nav>
+    </header>
+
+    <main>
+        <h1>Produtos Disponíveis</h1>
+        
+        <div>
+            <label for="category">Categoria:</label>
+            <select id="category" onchange="filterProducts()">
+                <option value="">Todas</option>
+                <option value="Notebook">Notebook</option>
+                <option value="Monitor">Monitor</option>
+                <option value="Teclado">Teclado</option>
+            </select>
+        </div>
+
+        <div id="products"></div>
+    </main>
+
+    <footer>
+        <p>Loja de Informática &copy; 2024</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
