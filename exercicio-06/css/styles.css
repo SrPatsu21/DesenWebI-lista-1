@@ -2,18 +2,46 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    justify-content: start;
+}
+h1 , h2, h3, h4, h5
+{
+    margin: 0;
+    padding: 0;
 }
 
 header {
     background-color: #333;
+    width: 100%;
     color: white;
     padding: 10px;
+    padding: 0 30rem;
+}
+
+header nav
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+header nav input
+{
+    padding: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 header nav ul {
     list-style: none;
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 header nav ul li {
@@ -26,7 +54,40 @@ header nav ul li a {
 }
 
 main {
-    padding: 20px;
+    padding: 0rem 30rem;
+    width: 100%;
+}
+
+#available_title
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    margin-bottom: 2rem;
+}
+
+#available_title h1
+{
+    width: 100%;
+}
+
+#products
+{
+    display: grid;
+    grid: auto-flow/ repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.checkout
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.checkout label, .checkout input
+{
+    width: 100%;
 }
 
 .product, .cart-item {
@@ -34,10 +95,42 @@ main {
     padding: 10px;
     margin-bottom: 10px;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
 }
 
 .product img, .cart-item img {
     width: 100px;
     margin-right: 10px;
+}
+footer
+{
+    background-color: #eee;
+    margin-top: 3rem;
+    align-self: flex-end;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+footer p
+{
+    text-align: center;
+}
+
+footer div
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+footer div div
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0 30rem;
 }

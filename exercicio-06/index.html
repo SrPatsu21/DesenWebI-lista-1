@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/favicon_io/favicon.ico">
     <title>Loja de Informática</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -18,9 +19,9 @@
     </header>
 
     <main>
-        <h1>Produtos Disponíveis</h1>
-        
-        <div>
+        <div id="available_title">
+            <h1>Produtos Disponíveis:</h1>
+
             <label for="category">Categoria:</label>
             <select id="category" onchange="filterProducts()">
                 <option value="">Todas</option>
@@ -34,6 +35,21 @@
     </main>
 
     <footer>
+        <div>
+            <div>
+                <h3>Redes sociais:</h3>
+                <p><a href="https://facebook.com" target="_blank">Facebook</a></p>
+                <p><a href="https://wa.me/SeuNumero" target="_blank">WhatsApp</a></p>
+                <p><a href="https://twitter.com" target="_blank">X (Twitter)</a></p>
+                <p><a href="https://instagram.com" target="_blank">Instagram</a></p>
+
+            </div>
+            <div>
+                <h3>Metodos de pagamento:</h3>
+                <p>Cartão de Crédito</p>
+                <p>Boleto Bancário</p>
+            </div>
+        </div>
         <p>Loja de Informática &copy; 2024</p>
     </footer>
 

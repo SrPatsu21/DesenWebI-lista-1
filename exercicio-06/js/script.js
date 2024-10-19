@@ -2,7 +2,11 @@
 const products = [
     { "id": 1, "name": "Notebook Dell Inspiron 15 3000", "price": 2999.99, "category": "Notebook", "brand": "Dell", "images": ["images/notebook-dell.jpg"] },
     { "id": 2, "name": "Monitor LG 24' LED Full HD", "price": 899.99, "category": "Monitor", "brand": "LG", "images": ["images/monitor-lg.jpg"] },
-    { "id": 3, "name": "Teclado Mecânico Gamer HyperX Alloy FPS", "price": 299.99, "category": "Teclado", "brand": "HyperX", "images": ["images/teclado-hyperx.jpg"] }
+    { "id": 3, "name": "Teclado Mecânico Gamer HyperX Alloy FPS", "price": 299.99, "category": "Teclado", "brand": "HyperX", "images": ["images/teclado-hyperx.jpg"] },
+    { "id": 4, "name": "Monitor LG 24' LED Full HD", "price": 899.99, "category": "Monitor", "brand": "LG", "images": ["images/monitor-lg.jpg"] },
+    { "id": 5, "name": "Notebook Dell Inspiron 15 3000", "price": 2999.99, "category": "Notebook", "brand": "Dell", "images": ["images/notebook-dell.jpg"] },
+    { "id": 6, "name": "Monitor LG 24' LED Full HD", "price": 899.99, "category": "Monitor", "brand": "LG", "images": ["images/monitor-lg.jpg"] },
+    { "id": 7, "name": "Teclado Mecânico Gamer HyperX Alloy FPS", "price": 299.99, "category": "Teclado", "brand": "HyperX", "images": ["images/teclado-hyperx.jpg"] },
 ];
 
 document.addEventListener("DOMContentLoaded", function() {

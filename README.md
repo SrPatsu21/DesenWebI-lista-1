@@ -182,11 +182,11 @@ Além disso, siga essas boas práticas em todos os exercícios:
    - [ ] (opcional) Implementar o envio de e-mail (SMTP) para o seu e-mail pessoal ao enviar o formulário de contato.
 
 6. Criar um site de e-commerce para uma loja de informática ou outro tema. O site deve conter as seguintes páginas:
-   - [x] Página Inicial: exibir todos os produtos disponíveis para venda. Adicionar filtros para pesquisar produtos por categoria e marca. Adicione um campo de busca para pesquisar produtos por nome.
-   - [x] Detalhes do produto: exibir informações detalhadas sobre o produto, como nome, descrição, preço, fotos, etc.
+   <!-- - [x] Página Inicial: exibir todos os produtos disponíveis para venda. Adicionar filtros para pesquisar produtos por categoria e marca. Adicione um campo de busca para pesquisar produtos por nome. -->
+   <!-- - [x] Detalhes do produto: exibir informações detalhadas sobre o produto, como nome, descrição, preço, fotos, etc. -->
    - [x] Carrinho de compras: exibir os produtos adicionados ao carrinho, quantidade, preço total, etc. Permitir adicionar, remover e alterar a quantidade de produtos no carrinho.
-   - [x] Checkout: exibir um formulário para o usuário informar os dados de entrega e pagamento.
-   - [x] Navegação: adicionar um menu de navegação para alternar entre as páginas. Escolha um menu de navegação que seja acessível e responsivo em dispositivos móveis. 
+   <!-- - [x] Checkout: exibir um formulário para o usuário informar os dados de entrega e pagamento. -->
+   <!-- - [x] Navegação: adicionar um menu de navegação para alternar entre as páginas. Escolha um menu de navegação que seja acessível e responsivo em dispositivos móveis.  -->
    - [x] Rodapé: exibir informações sobre a loja, formas de pagamento, redes sociais, etc.
    - [x] Adicionar um botão para adicionar o produto ao carrinho. Use a API `localStorage` para armazenar os produtos no carrinho.
    - [x] Adicionar um botão para remover o produto do carrinho. Exibir uma página ou modal de confirmação antes de remover o produto.
