@@ -27,12 +27,14 @@
     </footer>
 
     <script>
-        // function removeFromCart(productId) {
-        //     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-        //     cart = cart.filter(product => product.id !== productId);
-        //     localStorage.setItem("cart", JSON.stringify(cart));
-        //     alert("Produto removido do carrinho!");
-        // }
+        function removeFromCart(productId) {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            cart = cart.filter(product => product.id !== productId);
+            console.log(cart)
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert("Produto removido do carrinho!");
+            location.reload();
+        }
 
         document.addEventListener("DOMContentLoaded", function() {
             const cart = JSON.parse(localStorage.getItem("cart")) || [];
