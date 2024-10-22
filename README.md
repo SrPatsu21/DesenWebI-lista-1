@@ -184,21 +184,21 @@ Além disso, siga essas boas práticas em todos os exercícios:
 6. Criar um site de e-commerce para uma loja de informática ou outro tema. O site deve conter as seguintes páginas:
    <!-- - [x] Página Inicial: exibir todos os produtos disponíveis para venda. Adicionar filtros para pesquisar produtos por categoria e marca. Adicione um campo de busca para pesquisar produtos por nome. -->
    <!-- - [x] Detalhes do produto: exibir informações detalhadas sobre o produto, como nome, descrição, preço, fotos, etc. -->
-   - [x] Carrinho de compras: exibir os produtos adicionados ao carrinho, quantidade, preço total, etc. Permitir adicionar, remover e alterar a quantidade de produtos no carrinho.
+   <!-- - [x] Carrinho de compras: exibir os produtos adicionados ao carrinho, quantidade, preço total, etc. Permitir adicionar, remover e alterar a quantidade de produtos no carrinho. -->
    <!-- - [x] Checkout: exibir um formulário para o usuário informar os dados de entrega e pagamento. -->
    <!-- - [x] Navegação: adicionar um menu de navegação para alternar entre as páginas. Escolha um menu de navegação que seja acessível e responsivo em dispositivos móveis.  -->
-   - [x] Rodapé: exibir informações sobre a loja, formas de pagamento, redes sociais, etc.
-   - [x] Adicionar um botão para adicionar o produto ao carrinho. Use a API `localStorage` para armazenar os produtos no carrinho.
-   - [x] Adicionar um botão para remover o produto do carrinho. Exibir uma página ou modal de confirmação antes de remover o produto.
-   - [x] Adicionar um botão para finalizar a compra. Exibir uma página ou modal de confirmação antes de finalizar a compra.
-   - [x] **Acessibilidade**: respeitar o critério 2.4.3 sobre foco do alvo da WCAG disponível em: [https://www.guia-wcag.com/](https://www.guia-wcag.com/).
+   <!-- - [x] Rodapé: exibir informações sobre a loja, formas de pagamento, redes sociais, etc. -->
+   <!-- - [x] Adicionar um botão para adicionar o produto ao carrinho. Use a API `localStorage` para armazenar os produtos no carrinho. -->
+   <!-- - [x] Adicionar um botão para remover o produto do carrinho. Exibir uma página ou modal de confirmação antes de remover o produto. -->
+   <!-- - [x] Adicionar um botão para finalizar a compra. Exibir uma página ou modal de confirmação antes de finalizar a compra. -->
+   <!-- - [x] **Acessibilidade**: respeitar o critério 2.4.3 sobre foco do alvo da WCAG disponível em: [https://www.guia-wcag.com/](https://www.guia-wcag.com/).
    - [x] **Acessibilidade**: respeitar o critério 3.3.1 sobre identificação de erros da WCAG disponível em: [https://www.guia-wcag.com/](https://www.guia-wcag.com/).
-   - [x] **Acessibilidade**: respeitar o critério 4.1.1 sobre nome, função e valor da WCAG disponível em: [https://www.guia-wcag.com/](https://www.guia-wcag.com/).
+   - [x] **Acessibilidade**: respeitar o critério 4.1.1 sobre nome, função e valor da WCAG disponível em: [https://www.guia-wcag.com/](https://www.guia-wcag.com/). -->
    - [ ] (opcional) Adicionar um sistema de avaliação de produtos com estrelas. Permitir que o usuário possa avaliar e comentar sobre o produto.
    - [ ] (opcional) Usar uma API de pagamento, como o PayPal ou Stripe, para simular o pagamento.
    - [ ] (opcional) Adicionar um sistema de recomendação de produtos baseado nas preferências do usuário.
 
-Os produtos podem estar disponíveis em um arquivo JSON (Exemplo abaixo) ou em uma API externa como [https://dummyjson.com/docs/products](https://dummyjson.com/docs/products).
+<!-- Os produtos podem estar disponíveis em um arquivo JSON (Exemplo abaixo) ou em uma API externa como [https://dummyjson.com/docs/products](https://dummyjson.com/docs/products).
 
 ```json
 [
@@ -230,7 +230,7 @@ Os produtos podem estar disponíveis em um arquivo JSON (Exemplo abaixo) ou em u
     "images": ["teclado-hyperx.jpg", "teclado-hyperx-2.jpg"]
   }
 ]
-```
+``` -->
 
 7. Criar um jogo estilo quiz para testar os conhecimentos dos usuários sobre um determinado tema relacionado a computação. O jogo deve conter as seguintes funcionalidades:
    - [x] Página inicial: exibir uma breve descrição do jogo e um botão para iniciar o quiz.

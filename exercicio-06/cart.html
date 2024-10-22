@@ -19,6 +19,7 @@
     <main>
         <h1>Carrinho de Compras</h1>
         <div id="cart"></div>
+        <h2 id="total"></h2>
         <button onclick="checkout()">Finalizar Compra</button>
     </main>
 
@@ -27,14 +28,19 @@
     </footer>
 
     <script>
+        var value = 0;
         function updateCart() {
             const cart = JSON.parse(localStorage.getItem("cart")) || [];
             const cartContainer = document.getElementById("cart");
+            value = 0;
+            cart.forEach(product=>{
+                value += (product.price*product.quantity);
+            })
             cartContainer.innerHTML = cart.map(product => `
                 <div class="cart-item">
                     <img src="${product.images[0]}" alt="${product.name}">
                     <p>${product.name}</p>
-                    <p>Preço: R$ ${product.price.toFixed(2)}</p>
+                    <p>Preço: R$ ${(product.price*product.quantity).toFixed(2)}</p>
                     <p>
                         <button onclick="changeQuantity(${product.id}, -1)">-</button>
                         <span>${product.quantity}</span>
@@ -43,6 +49,8 @@
                     <button onclick="removeFromCart(${product.id})">Remover do Carrinho</button>
                 </div>
             `).join("");
+            const total = document.getElementById("total");
+            total.innerHTML = "total:" + value.toFixed(2);
         }
 
         function changeQuantity(productId, change) {

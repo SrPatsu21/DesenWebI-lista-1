@@ -90,7 +90,8 @@ main {
     width: 100%;
 }
 
-.product, .cart-item {
+.product
+{
     border: 1px solid #ccc;
     padding: 10px;
     margin-bottom: 10px;
@@ -99,9 +100,21 @@ main {
     align-items: center;
 }
 
-.product img, .cart-item img {
+.product img, .cart-item img
+{
     width: 100px;
     margin-right: 10px;
+}
+
+.cart-item
+{
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 footer
 {

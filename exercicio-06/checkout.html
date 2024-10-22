@@ -33,12 +33,18 @@
                 <option value="boleto">Boleto Bancário</option>
             </select>
 
-            <button type="submit">Finalizar Compra</button>
+            <button type="submit" onclick="removeFromCart()">Finalizar Compra</button>
         </form>
     </main>
 
     <footer>
         <p>Loja de Informática &copy; 2024</p>
     </footer>
+    <script>
+        function removeFromCart() {
+            localStorage.removeItem("cart");
+            alert("Produtos removido do carrinho!");
+        }
+    </script>
 </body>
 </html>
